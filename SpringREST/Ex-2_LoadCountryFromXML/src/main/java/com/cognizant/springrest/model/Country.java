@@ -1,16 +1,9 @@
-package com.cognizant.ormlearn.model;
+package com.cognizant.springrest.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
-// Marks this class as a database table
-@Entity
+// Model class representing a Country
 public class Country {
 
-    // Marks this field as the primary key
-    @Id
     private String code;
-
     private String name;
 
     // Default constructor
@@ -42,11 +35,17 @@ public class Country {
     public void setName(String name) {
         this.name = name;
     }
+
+    // Returns the object as a string
+    @Override
+    public String toString() {
+        return "Country [code=" + code + ", name=" + name + "]";
+    }
 }
 
 /*
  * Learned:
- * - Used @Entity to map the class to a database table.
- * - Used @Id to define the primary key.
- * - Created constructors, getters, and setters.
+ * - Created a model class.
+ * - Used constructors, getters, and setters.
+ * - Used toString() to display object details.
  */
